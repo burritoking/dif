@@ -69,7 +69,8 @@ static bool pmp_cfg_csr_read(pmp_region_index_t region, uint32_t *value) {
     CSR_READ(CSR_REG_PMPCFG##config_reg_id, value); \
     return true;                                    \
   }
-#include "runtime/pmp_regions.def"
+// #include "runtime/pmp_regions.def"
+#include "pmp_regions.def"
     default:
       return false;
   }
@@ -94,7 +95,8 @@ static bool pmp_cfg_csr_write(pmp_region_index_t region, uint32_t value) {
     CSR_WRITE(CSR_REG_PMPCFG##config_reg_id, value); \
     return true;                                     \
   }
-#include "runtime/pmp_regions.def"
+// #include "runtime/pmp_regions.def"
+#include "pmp_regions.def"
     default:
       return false;
   }
@@ -116,7 +118,8 @@ static bool pmp_addr_csr_read(pmp_region_index_t region, uint32_t *value) {
     CSR_READ(CSR_REG_PMPADDR##region_id, value); \
     return true;                                 \
   }
-#include "runtime/pmp_regions.def"
+// #include "runtime/pmp_regions.def"
+#include "pmp_regions.def"
     default:
       return false;
   }
@@ -137,7 +140,8 @@ static bool pmp_addr_csr_write(pmp_region_index_t region, uint32_t value) {
     CSR_WRITE(CSR_REG_PMPADDR##region_id, value); \
     return true;                                  \
   }
-#include "runtime/pmp_regions.def"
+// #include "runtime/pmp_regions.def"
+#include "pmp_regions.def"
     default:
       return false;
   }
